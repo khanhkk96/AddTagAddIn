@@ -35,36 +35,37 @@ namespace ReplaceAddIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon1));
+            Microsoft.Office.Tools.Ribbon.RibbonBox box7;
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl1 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl2 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl3 = this.Factory.CreateRibbonDropDownItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon1));
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.btnSelectSource = this.Factory.CreateRibbonButton();
-            this.box2 = this.Factory.CreateRibbonBox();
-            this.cboTags = this.Factory.CreateRibbonComboBox();
-            this.btnSelectTag = this.Factory.CreateRibbonButton();
-            this.box4 = this.Factory.CreateRibbonBox();
-            this.buttonGroup1 = this.Factory.CreateRibbonButtonGroup();
-            this.label1 = this.Factory.CreateRibbonLabel();
-            this.label2 = this.Factory.CreateRibbonLabel();
-            this.box7 = this.Factory.CreateRibbonBox();
             this.cboTemplate = this.Factory.CreateRibbonComboBox();
+            this.box2 = this.Factory.CreateRibbonBox();
+            this.box4 = this.Factory.CreateRibbonBox();
+            this.label1 = this.Factory.CreateRibbonLabel();
+            this.buttonGroup1 = this.Factory.CreateRibbonButtonGroup();
+            this.btnSelectSource = this.Factory.CreateRibbonButton();
             this.group2 = this.Factory.CreateRibbonGroup();
-            this.box8 = this.Factory.CreateRibbonBox();
             this.box9 = this.Factory.CreateRibbonBox();
+            this.cboTags = this.Factory.CreateRibbonComboBox();
+            this.box8 = this.Factory.CreateRibbonBox();
             this.box10 = this.Factory.CreateRibbonBox();
+            this.label2 = this.Factory.CreateRibbonLabel();
             this.box11 = this.Factory.CreateRibbonBox();
+            this.btnSelectTag = this.Factory.CreateRibbonButton();
+            box7 = this.Factory.CreateRibbonBox();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
+            box7.SuspendLayout();
             this.box2.SuspendLayout();
             this.box4.SuspendLayout();
             this.buttonGroup1.SuspendLayout();
-            this.box7.SuspendLayout();
             this.group2.SuspendLayout();
-            this.box8.SuspendLayout();
             this.box9.SuspendLayout();
+            this.box8.SuspendLayout();
             this.box10.SuspendLayout();
             this.box11.SuspendLayout();
             this.SuspendLayout();
@@ -79,62 +80,15 @@ namespace ReplaceAddIn
             // 
             // group1
             // 
-            this.group1.Items.Add(this.box7);
+            this.group1.Items.Add(box7);
             this.group1.Items.Add(this.box2);
-            this.group1.Label = "tools";
+            this.group1.Label = "Select resource";
             this.group1.Name = "group1";
-            // 
-            // btnSelectSource
-            // 
-            this.btnSelectSource.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectSource.Image")));
-            this.btnSelectSource.Label = "DS tags";
-            this.btnSelectSource.Name = "btnSelectSource";
-            this.btnSelectSource.ShowImage = true;
-            this.btnSelectSource.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSelectSource_Click);
-            // 
-            // box2
-            // 
-            this.box2.Items.Add(this.box4);
-            this.box2.Items.Add(this.buttonGroup1);
-            this.box2.Name = "box2";
-            // 
-            // cboTags
-            // 
-            this.cboTags.Label = "Thẻ";
-            this.cboTags.Name = "cboTags";
-            // 
-            // btnSelectTag
-            // 
-            this.btnSelectTag.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectTag.Image")));
-            this.btnSelectTag.Label = "Chọn thẻ";
-            this.btnSelectTag.Name = "btnSelectTag";
-            this.btnSelectTag.ShowImage = true;
-            this.btnSelectTag.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSelectTag_Click);
-            // 
-            // box4
-            // 
-            this.box4.Items.Add(this.label1);
-            this.box4.Name = "box4";
-            // 
-            // buttonGroup1
-            // 
-            this.buttonGroup1.Items.Add(this.btnSelectSource);
-            this.buttonGroup1.Name = "buttonGroup1";
-            // 
-            // label1
-            // 
-            this.label1.Label = "File tags";
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            this.label2.Label = "Chọn thẻ chèn";
-            this.label2.Name = "label2";
             // 
             // box7
             // 
-            this.box7.Items.Add(this.cboTemplate);
-            this.box7.Name = "box7";
+            box7.Items.Add(this.cboTemplate);
+            box7.Name = "box7";
             // 
             // cboTemplate
             // 
@@ -146,13 +100,54 @@ namespace ReplaceAddIn
             this.cboTemplate.Items.Add(ribbonDropDownItemImpl3);
             this.cboTemplate.Label = "Mẫu tài liệu";
             this.cboTemplate.Name = "cboTemplate";
+            this.cboTemplate.Text = null;
+            // 
+            // box2
+            // 
+            this.box2.Items.Add(this.box4);
+            this.box2.Items.Add(this.buttonGroup1);
+            this.box2.Name = "box2";
+            // 
+            // box4
+            // 
+            this.box4.Items.Add(this.label1);
+            this.box4.Name = "box4";
+            // 
+            // label1
+            // 
+            this.label1.Label = "File tags";
+            this.label1.Name = "label1";
+            // 
+            // buttonGroup1
+            // 
+            this.buttonGroup1.Items.Add(this.btnSelectSource);
+            this.buttonGroup1.Name = "buttonGroup1";
+            // 
+            // btnSelectSource
+            // 
+            this.btnSelectSource.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectSource.Image")));
+            this.btnSelectSource.Label = "Chọn file";
+            this.btnSelectSource.Name = "btnSelectSource";
+            this.btnSelectSource.ShowImage = true;
+            this.btnSelectSource.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSelectSource_Click);
             // 
             // group2
             // 
             this.group2.Items.Add(this.box9);
             this.group2.Items.Add(this.box8);
-            this.group2.Label = "group2";
+            this.group2.Label = "Add tag to page";
             this.group2.Name = "group2";
+            // 
+            // box9
+            // 
+            this.box9.Items.Add(this.cboTags);
+            this.box9.Name = "box9";
+            // 
+            // cboTags
+            // 
+            this.cboTags.Label = "DS thẻ";
+            this.cboTags.Name = "cboTags";
+            this.cboTags.Text = null;
             // 
             // box8
             // 
@@ -160,20 +155,28 @@ namespace ReplaceAddIn
             this.box8.Items.Add(this.box11);
             this.box8.Name = "box8";
             // 
-            // box9
-            // 
-            this.box9.Items.Add(this.cboTags);
-            this.box9.Name = "box9";
-            // 
             // box10
             // 
             this.box10.Items.Add(this.label2);
             this.box10.Name = "box10";
             // 
+            // label2
+            // 
+            this.label2.Label = "Chọn thẻ gán";
+            this.label2.Name = "label2";
+            // 
             // box11
             // 
             this.box11.Items.Add(this.btnSelectTag);
             this.box11.Name = "box11";
+            // 
+            // btnSelectTag
+            // 
+            this.btnSelectTag.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectTag.Image")));
+            this.btnSelectTag.Label = "Chọn thẻ";
+            this.btnSelectTag.Name = "btnSelectTag";
+            this.btnSelectTag.ShowImage = true;
+            this.btnSelectTag.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSelectTag_Click);
             // 
             // Ribbon1
             // 
@@ -185,20 +188,20 @@ namespace ReplaceAddIn
             this.tab1.PerformLayout();
             this.group1.ResumeLayout(false);
             this.group1.PerformLayout();
+            box7.ResumeLayout(false);
+            box7.PerformLayout();
             this.box2.ResumeLayout(false);
             this.box2.PerformLayout();
             this.box4.ResumeLayout(false);
             this.box4.PerformLayout();
             this.buttonGroup1.ResumeLayout(false);
             this.buttonGroup1.PerformLayout();
-            this.box7.ResumeLayout(false);
-            this.box7.PerformLayout();
             this.group2.ResumeLayout(false);
             this.group2.PerformLayout();
-            this.box8.ResumeLayout(false);
-            this.box8.PerformLayout();
             this.box9.ResumeLayout(false);
             this.box9.PerformLayout();
+            this.box8.ResumeLayout(false);
+            this.box8.PerformLayout();
             this.box10.ResumeLayout(false);
             this.box10.PerformLayout();
             this.box11.ResumeLayout(false);
@@ -219,7 +222,6 @@ namespace ReplaceAddIn
         internal Microsoft.Office.Tools.Ribbon.RibbonButtonGroup buttonGroup1;
         internal Microsoft.Office.Tools.Ribbon.RibbonLabel label1;
         internal Microsoft.Office.Tools.Ribbon.RibbonLabel label2;
-        internal Microsoft.Office.Tools.Ribbon.RibbonBox box7;
         internal Microsoft.Office.Tools.Ribbon.RibbonComboBox cboTemplate;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonBox box9;
