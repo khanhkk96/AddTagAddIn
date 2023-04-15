@@ -42,7 +42,8 @@ namespace ReplaceAddIn
                     for (int j = 1; j <= xlRange.Rows.Count; j++)
                     {
                         RibbonDropDownItem item = Globals.Factory.GetRibbonFactory().CreateRibbonDropDownItem();
-                        item.Label = xlRange.Cells[j, 1].Value2.ToString();
+                        item.Label = xlRange.Cells[j, 2].Value2.ToString();
+                        item.Tag = xlRange.Cells[j, 1].Value2.ToString();
                         cboTags.Items.Add(item);
                     }
                 }
@@ -87,7 +88,8 @@ namespace ReplaceAddIn
             int end = Application.Selection.Range.End;
             Word.Range rng = Application.ActiveDocument.Range(start, end);
             rng.Select();
-            string selectedTag = cboTags.Text;
+            string tag = cboTags.Text;
+            string selectedTag = cboTags.Items.Where(x => x.Label == tag).FirstOrDefault()?.Tag.ToString();
             if (selectedTag != "")
             {
                 string value = selectedTag.Trim();

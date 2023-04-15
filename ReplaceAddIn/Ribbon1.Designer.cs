@@ -40,9 +40,9 @@ namespace ReplaceAddIn
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl2 = this.Factory.CreateRibbonDropDownItem();
             Microsoft.Office.Tools.Ribbon.RibbonDropDownItem ribbonDropDownItemImpl3 = this.Factory.CreateRibbonDropDownItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon1));
+            this.cboTemplate = this.Factory.CreateRibbonComboBox();
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.cboTemplate = this.Factory.CreateRibbonComboBox();
             this.box2 = this.Factory.CreateRibbonBox();
             this.box4 = this.Factory.CreateRibbonBox();
             this.label1 = this.Factory.CreateRibbonLabel();
@@ -57,9 +57,9 @@ namespace ReplaceAddIn
             this.box11 = this.Factory.CreateRibbonBox();
             this.btnSelectTag = this.Factory.CreateRibbonButton();
             box7 = this.Factory.CreateRibbonBox();
+            box7.SuspendLayout();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
-            box7.SuspendLayout();
             this.box2.SuspendLayout();
             this.box4.SuspendLayout();
             this.buttonGroup1.SuspendLayout();
@@ -69,21 +69,6 @@ namespace ReplaceAddIn
             this.box10.SuspendLayout();
             this.box11.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tab1
-            // 
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.Groups.Add(this.group1);
-            this.tab1.Groups.Add(this.group2);
-            this.tab1.Label = "TabAddIns";
-            this.tab1.Name = "tab1";
-            // 
-            // group1
-            // 
-            this.group1.Items.Add(box7);
-            this.group1.Items.Add(this.box2);
-            this.group1.Label = "Select resource";
-            this.group1.Name = "group1";
             // 
             // box7
             // 
@@ -101,6 +86,21 @@ namespace ReplaceAddIn
             this.cboTemplate.Label = "Mẫu tài liệu";
             this.cboTemplate.Name = "cboTemplate";
             this.cboTemplate.Text = null;
+            // 
+            // tab1
+            // 
+            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.tab1.Groups.Add(this.group1);
+            this.tab1.Groups.Add(this.group2);
+            this.tab1.Label = "TabAddIns";
+            this.tab1.Name = "tab1";
+            // 
+            // group1
+            // 
+            this.group1.Items.Add(box7);
+            this.group1.Items.Add(this.box2);
+            this.group1.Label = "Select resource";
+            this.group1.Name = "group1";
             // 
             // box2
             // 
@@ -184,12 +184,12 @@ namespace ReplaceAddIn
             this.RibbonType = "Microsoft.Word.Document";
             this.Tabs.Add(this.tab1);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon1_Load);
+            box7.ResumeLayout(false);
+            box7.PerformLayout();
             this.tab1.ResumeLayout(false);
             this.tab1.PerformLayout();
             this.group1.ResumeLayout(false);
             this.group1.PerformLayout();
-            box7.ResumeLayout(false);
-            box7.PerformLayout();
             this.box2.ResumeLayout(false);
             this.box2.PerformLayout();
             this.box4.ResumeLayout(false);
