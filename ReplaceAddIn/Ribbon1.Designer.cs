@@ -115,7 +115,7 @@ namespace ReplaceAddIn
             // 
             // label1
             // 
-            this.label1.Label = "File tags";
+            this.label1.Label = "Nguồn thẻ gán";
             this.label1.Name = "label1";
             // 
             // buttonGroup1
@@ -162,7 +162,7 @@ namespace ReplaceAddIn
             // 
             // label2
             // 
-            this.label2.Label = "Chọn thẻ gán";
+            this.label2.Label = "Thao tác";
             this.label2.Name = "label2";
             // 
             // box11
@@ -173,7 +173,7 @@ namespace ReplaceAddIn
             // btnSelectTag
             // 
             this.btnSelectTag.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectTag.Image")));
-            this.btnSelectTag.Label = "Chọn thẻ";
+            this.btnSelectTag.Label = "Gán thẻ";
             this.btnSelectTag.Name = "btnSelectTag";
             this.btnSelectTag.ShowImage = true;
             this.btnSelectTag.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSelectTag_Click);

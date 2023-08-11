@@ -2,3 +2,5 @@
 packages
 ReplaceAddIn/obj
 ReplaceAddIn/bin
+ReplaceAddIn/publish
+*.rar
